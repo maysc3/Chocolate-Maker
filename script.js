@@ -97,6 +97,7 @@ stopBtn.addEventListener("click", () => {
 
   stopBtn.style.display = "none";
   nextBtn.style.display = "inline-block";
+  highlightStep(2);
 });
 
 window.onload = () => {
@@ -538,3 +539,4 @@ nextBtn4.addEventListener("click", () => {
 restartBtn.addEventListener("click", () => {
   location.reload();
 });
+
