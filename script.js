@@ -97,7 +97,6 @@ stopBtn.addEventListener("click", () => {
 
   stopBtn.style.display = "none";
   nextBtn.style.display = "inline-block";
-  highlightStep(2);
 });
 
 window.onload = () => {
@@ -168,6 +167,7 @@ nextBtn.addEventListener("click", () => {
   stage2.style.display = "block";
   grindBtn.disabled = false;
   startGrindTimer();
+  highlightStep(2);
 });
 
 nextBtn2.addEventListener("click", () => {
@@ -539,4 +539,5 @@ nextBtn4.addEventListener("click", () => {
 restartBtn.addEventListener("click", () => {
   location.reload();
 });
+
 
