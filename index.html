@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chocolate Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topHeader">
+    <h1>🍫 Chocolate Maker</h1>
+    <p>Follow the steps to make chocolate!</p>
+  </header>
+
+  <div id="container">
+    <div id="game">
+      <!-- Stage 1 -->
+      <div id="stage1" class="stage">
+        <h2>Roasting</h2>
+        <div class="roast-container">
+          <div id="progressBar" class="progress-Bar"></div>
+          <div id="scoringZone"></div>
+        </div>
+        <button id="stopBtn">Stop</button>
+        <p id="result"></p>
+        <button id="nextBtn" style="display:none;">Next Stage</button>
+      </div>
+
+      <!-- Stage 2 -->
+      <div id="stage2" class="stage" style="display:none;">
+        <h2>Grinding</h2>
+        <div id="grindBar">
+        <div id="grindFill"></div>
+        </div>
+        <button id="grindBtn">Grind</button>
+        <p id="grindTimer"></p>
+        <p id="grindResult"></p>
+        <button id="nextBtn2" style="display:none;">Next Stage</button>
+      </div>    
+
+      <!-- Stage 3 -->
+      <div id="stage3" class="stage" style="display:none;">
+        <h2>Tempering</h2>
+      <!-- Gradient container -->
+      <div id="tempContainer">
+        <div id="tempBar"></div>
+        <!-- visible safe zone (center target) -->
+        <div id="safeZone" aria-hidden="true"></div>
+      </div>
+      <!-- Control button -->
+      <button id="tempControlBtn">Push Right</button>
+      <!-- Status outputs -->
+      <p id="timerDisplay"></p>
+      <p id="tempResult"></p>
+      <!-- Next button -->
+      <button id="nextBtn3" style="display:none;">Next Stage</button>
+    </div>
+
+      <!-- Stage 4: Molding -->
+      <div id="stage4" class="stage" style="display:none;">
+        <h2>Stage 4: Pour into Molds</h2>
+        <p>Drag the blobs into the molds!</p>
+        <p id="moldTimer"></p>
+        <div class="moldArea">
+          <div class="blobRow">
+            <div class="blob" draggable="true">🍫</div>
+            <div class="blob" draggable="true">🍫</div>
+            <div class="blob" draggable="true">🍫</div>
+          </div>
+          <div class="slotsRow">
+            <div class="moldSlot" data-label="Square"></div>
+            <div class="moldSlot" data-label="Round"></div>
+            <div class="moldSlot" data-label="Heart"></div>
+          </div>
+          <div class="slotLabels">
+            <div class="slotLabel">Square</div>
+            <div class="slotLabel">Round</div>
+            <div class="slotLabel">Heart</div>
+          </div>
+        </div>
+        <p id="moldResult"></p>
+        <button id="nextBtn4" style="display:none;">Finish!</button>
+      </div>
+
+          <!-- Final Screen -->
+      <div id="finalScreen" class="stage" style="display:none;">
+        <h2>🎉 Congratulations!</h2>
+        <p id="finalMessage">You made chocolate from scratch!</p>
+        <div id="scoreBreakdown">
+          <p id="finalScore"></p>
+          <ul id="perStageScores">
+            <li id="scoreRoast">Roast: 0</li>
+            <li id="scoreGrind">Grind: 0</li>
+            <li id="scoreTemper">Temper: 0</li>
+            <li id="scoreMold">Mold: 0</li>
+          </ul>
+        </div>
+        <button id="restartBtn">Play Again</button>
+      </div>
+  </div>
+    
+  <script src="script.js"></script>
+
+  <div id="info">
+    <h2>Chocolate Making Steps</h2>
+    <div id="step1" class="info-step">
+      <a class="info-link" href="https://www.cocoterra.com/how-to-roast-cocoa-beans-cocoa-roasting-process-and-its-importance/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Learn about roasting cocoa beans">
+        <img src="images/cocoa_bean.webp" alt="Roasting cocoa beans">
+        <p><strong>Roasting:</strong> Cocoa beans are roasted to bring out the flavor.</p>
+      </a>
+    </div>
+    <div id="step2" class="info-step">
+      <a class="info-link" href="https://www.researchgate.net/publication/353996732_The_Chocolate_Conching_Technique_and_Its_Impact_on_Physicochemical_Properties_A_Mini-Review" target="_blank" rel="noopener noreferrer" title="Learn about grinding cocoa nibs">
+        <img src="images/cocoa_nibs.webp" alt="Grinding cocoa nibs">
+        <p><strong>Grinding:</strong> Roasted nibs are ground into cocoa liquor.</p>
+      </a>
+    </div>
+    <div id="step3" class="info-step">
+      <a class="info-link" href="https://pubs.acs.org/doi/10.1021/acs.cgd.5c00269?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Learn about tempering chocolate">
+        <img src="images/chocolate_temp.webp" alt="Tempering chocolate">
+        <p><strong>Tempering:</strong> Chocolate is carefully heated and cooled for a smooth finish.</p>
+      </a>
+    </div>
+    <div id="step4" class="info-step">
+      <a class="info-link" href="https://www.icco.org/processing-cocoa/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Learn about molding chocolate">
+        <img src="images/chocolate_mold.webp" alt="Molding chocolate">
+        <p><strong>Molding:</strong> The chocolate is poured into molds and set.</p>
+      </a>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>
