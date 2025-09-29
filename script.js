@@ -167,6 +167,7 @@ nextBtn.addEventListener("click", () => {
   stage2.style.display = "block";
   grindBtn.disabled = false;
   startGrindTimer();
+  // highlight the second step in the info panel when Stage 1 finishes
   highlightStep(2);
 });
 
@@ -539,5 +540,3 @@ nextBtn4.addEventListener("click", () => {
 restartBtn.addEventListener("click", () => {
   location.reload();
 });
-
-

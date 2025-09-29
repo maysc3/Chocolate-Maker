@@ -335,6 +335,22 @@ h2 {
   object-fit: cover;
 }
 
+/* make the whole info-step row a clickable link */
+.info-step .info-link {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 6px;
+  border-radius: 6px;
+}
+.info-step .info-link img { transition: transform 180ms ease, box-shadow 180ms ease; }
+.info-step .info-link:hover img { transform: scale(1.04); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+.info-step .info-link:hover { cursor: pointer; background: rgba(0,0,0,0.02); }
+.info-step .info-link:focus { outline: none; box-shadow: 0 0 0 3px rgba(107,66,38,0.12); }
+
 .info-step p {
   margin: 0;
 }
